@@ -3,6 +3,11 @@ import SearchBar from "./SearchBar";
 import youtube from "../api/youtube";
 
 class App extends Component {
+  // The list of videos from YouTube API will be saved in 'state.videos' array
+  state = {
+    videos: [],
+  };
+
   // Fetch list of videos from YouTube API
   onTermSubmit = async (term) => {
     const response = await youtube.get("/search", {
@@ -10,7 +15,8 @@ class App extends Component {
         q: term,
       },
     });
-    console.log(response);
+    // Associate the data to 'state.videos' array
+    this.setState({ videos: response.data.items });
   };
 
   render() {
