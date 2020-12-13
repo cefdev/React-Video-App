@@ -18,8 +18,12 @@ class App extends Component {
         q: term,
       },
     });
-    // Associate the data to 'state.videos' array
-    this.setState({ videos: response.data.items });
+    this.setState({
+      // Associate the data to 'state.videos' array
+      videos: response.data.items,
+      // Choose the 1st item to be rendered in the UI after the user search for videos.
+      selectedVideo: response.data.items[0],
+    });
   };
 
   // Pass the video the user selected to 'state.selectedVideo

@@ -1,8 +1,9 @@
 import React from "react";
 
 const VideoDetail = ({ video }) => {
+  // Show nothing in VideoDetail UI when the app started
   if (!video) {
-    return <div>Search for something</div>;
+    return <div> </div>;
   }
 
   // Selected video URL
