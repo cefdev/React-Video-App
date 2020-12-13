@@ -7,6 +7,7 @@ class App extends Component {
   // The list of videos from YouTube API will be saved in 'state.videos' array
   state = {
     videos: [],
+    selectedVideo: null,
   };
 
   // Fetch list of videos from YouTube API
@@ -20,11 +21,19 @@ class App extends Component {
     this.setState({ videos: response.data.items });
   };
 
+  // Pass the video the user selected to 'state.selectedVideo
+  onVideoSelect = (video) => {
+    this.setState({ selectedVideo: video });
+  };
+
   render() {
     return (
       <div className="ui container">
         <SearchBar onFormSubmit={this.onTermSubmit} />
-        <VideoList videos={this.state.videos} />
+        <VideoList
+          onVideoSelect={this.onVideoSelect}
+          videos={this.state.videos}
+        />
       </div>
     );
   }

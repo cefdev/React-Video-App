@@ -1,10 +1,10 @@
 import React from "react";
 import VideoItem from "./VideoItem";
 
-const VideoList = ({ videos }) => {
+const VideoList = ({ videos, onVideoSelect }) => {
   // Map over the list of videos from YouTube API and pass each video's data to VideoItem component as a prop
   const renderedList = videos.map((video) => {
-    return <VideoItem video={video} />;
+    return <VideoItem video={video} onVideoSelect={onVideoSelect} />;
   });
 
   return <div className="ui relaxed divided list">{renderedList}</div>;
