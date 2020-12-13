@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchBar from "./SearchBar";
 import youtube from "../api/youtube";
+import VideoList from "./VideoList";
 
 class App extends Component {
   // The list of videos from YouTube API will be saved in 'state.videos' array
@@ -23,6 +24,7 @@ class App extends Component {
     return (
       <div className="ui container">
         <SearchBar onFormSubmit={this.onTermSubmit} />
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
