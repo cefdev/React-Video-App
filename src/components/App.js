@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 import youtube from "../api/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import "./style.css";
+import "./App.css";
 
 class App extends Component {
   // The list of videos from YouTube API will be saved in 'state.videos' array
