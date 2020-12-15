@@ -21,6 +21,7 @@ class SearchBar extends Component {
           <div className="field">
             <label>Video Search</label>
             <input
+              placeholder="Search"
               type="text"
               value={this.state.term}
               onChange={this.onInputChange}

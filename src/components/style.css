@@ -1,0 +1,25 @@
+body {
+  background-color: #282828;
+}
+
+.ui.container {
+  width: 100% !important;
+}
+
+.ui.form .field {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.ui.grid {
+  width: 85% !important;
+  margin: 0 auto;
+}
+
+.search-bar {
+  background-color: #c4302b !important;
+}
+
+.search-bar label {
+  color: white !important;
+}
